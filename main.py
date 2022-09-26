@@ -77,7 +77,8 @@ check_label.grid(column=2, row=4)
 
 #canvas of tomato image
 canvas = Canvas(width= 200, height=224, bg=YELLOW, highlightthickness=0)
-tomato_img = PhotoImage(file="/Users/Kyle/Documents/Python Udemy/Day 28/pomodoro-start/tomato.png")
+#if PhotoImage does not work with relative path file then use absolut path for image
+tomato_img = PhotoImage(file="tomato.png")
 canvas.create_image(100, 112, image=tomato_img)
 timer_text = canvas.create_text(100,130, text="00:00", fill="white", font=(FONT_NAME, 35, "bold"))
 canvas.grid(column=2,row=2)
